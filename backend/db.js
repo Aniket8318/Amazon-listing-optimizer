@@ -6,24 +6,19 @@ const pool = mysql.createPool({
   user: process.env.DB_USER || "root",
   password: process.env.DB_PASSWORD || "",
   database: process.env.DB_NAME || "amazon_optimizer",
+  ssl: { rejectUnauthorized: false },
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  timezone: "+00:00",
 });
 
-// Test connection on startup
-pool
-  .getConnection()
+pool.getConnection()
   .then((conn) => {
     console.log("✅ MySQL connected successfully");
     conn.release();
   })
   .catch((err) => {
     console.error("❌ MySQL connection failed:", err.message);
-    console.error(
-      "   Make sure MySQL is running and .env credentials are correct."
-    );
   });
 
 module.exports = pool;
