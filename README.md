@@ -247,3 +247,7 @@ The backend applies a rate limit of **30 requests per 10 minutes** per IP to pre
 | `DB_NAME`         | Yes      | Database name (default: amazon_optimizer) |
 | `PORT`            | No       | Backend port (default: 3001)          |
 | `FRONTEND_URL`    | No       | CORS origin (default: http://localhost:3000) |
+
+
+
+AVNS_3PAc6wZnwpxre2Pvpn7

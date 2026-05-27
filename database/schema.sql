@@ -1,5 +1,4 @@
--- Amazon Listing Optimizer Database Schema
--- Run this file to initialize your MySQL database
+
 
 CREATE DATABASE IF NOT EXISTS amazon_optimizer;
 USE amazon_optimizer;
